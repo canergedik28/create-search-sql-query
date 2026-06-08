@@ -82,7 +82,7 @@ class CreateSearchSqlQuery2 {
           }
         }
         
-        if($this->page){
+        if(self::$pageSize){
             $this->createSearchSqlQuery .=   " LIMIT ".self::$pageSize;
         }
         return $this->createSearchSqlQuery;
