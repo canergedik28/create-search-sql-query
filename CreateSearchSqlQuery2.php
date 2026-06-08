@@ -70,8 +70,8 @@ class CreateSearchSqlQuery2 {
         } 
 
         if($this->last_data_id){
-            $this->createSearchSqlQuery =  preg_match('/WHERE/',$this->createSearchSqlQuery)   ? $this->createSearchSqlQuery : $this->createSearchSqlQuery .= ' WHERE';
-            $this->createSearchSqlQuery .=  (substr($this->createSearchSqlQuery,-5,  null)  == "WHERE" ? ' ' : ' AND '). 'id >'.$this->last_data_id.'';
+          $this->createSearchSqlQuery =  preg_match('/WHERE/',$this->createSearchSqlQuery)   ? $this->createSearchSqlQuery : $this->createSearchSqlQuery .= ' WHERE';
+          $this->createSearchSqlQuery .=  (substr($this->createSearchSqlQuery,-5,  null)  == "WHERE" ? ' ' : ' AND '). 'id >'.$this->last_data_id.'';
         } 
 
         if($this->order){
